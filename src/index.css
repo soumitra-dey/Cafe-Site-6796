@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-cafe-500 font-sans;
+}
+
+.nav-link {
+  @apply relative px-4 py-2 text-cafe-400 hover:text-cafe-500 transition-colors;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-cafe-300 transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.section-title {
+  @apply font-serif text-4xl md:text-5xl font-bold text-cafe-500 mb-8;
+}
